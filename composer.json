@@ -1,26 +1,26 @@
 {
-	"repositories": [
-		{ "type": "composer", "url": "https://composer.typo3.org/" },
-		{ "type": "vcs", "url": "https://github.com/slub/typo3-find/" },
-	  	{ "type": "vcs", "url": "https://github.com/slub/slub-find-extend/" },
-	  	{ "type": "vcs", "url": "git@git.slub-dresden.de:slub-webseite/ahn-katalog-config.git" },
-	  	{ "type": "vcs", "url": "git@git.slub-dresden.de:slub-webseite/ahn-katalog-beta.git" }
-	],
-	"name": "slub/typo3-dist",
-	"description" : "TYPO3 CMS Base Distribution",
-	"license": "GPL-2.0+",
-	"config": {
-	  "vendor-dir": "Packages/Libraries",
-	  "bin-dir": "bin"
-	},
-	"require": {
-		"typo3/cms": "6.2.14",
-	  	"typo3-ter/realurl": "^1.13",
-	  	"typo3-ter/t3jquery": "^3.0",
-		"slub/find": "dev-slub",
-	  	"slub/slub-find-extend": "dev-master",
-	  	"slub/ahn-katalog-config": "dev-master",
-	  	"slub/ahn-katalog-beta": "dev-master"
-	},
-	"minimum-stability": "dev"
+    "repositories": [
+        { "type": "composer", "url": "https://composer.typo3.org/" },
+        { "type": "vcs", "url": "https://github.com/slub/typo3-find/" },
+        { "type": "vcs", "url": "https://github.com/slub/typo3-realurl/" },
+        { "type": "vcs", "url": "https://github.com/slub/slub-find-extend/" },
+        { "type": "vcs", "url": "https://git.slub-dresden.de/slub-webseite/ahn-katalog-config/" },
+        { "type": "vcs", "url": "https://git.slub-dresden.de/slub-webseite/ahn-katalog-beta/" }
+    ],
+    "name": "typo3/cms-base-distribution",
+    "description" : "arthistoricum.net Katalog - TYPO3 CMS Base Distribution",
+    "license": "GPL-2.0+",
+    "require": {
+        "typo3/cms": "~7.6.0",
+        "slub/find": "dev-slub-timing",
+        "slub/slub-find-extend": "dev-master",
+        "slub/ahn-katalog-config": "dev-master",
+        "slub/ahn-katalog-beta": "dev-master",
+        "dmitryd/typo3-realurl": "dev-master"
+    },
+    "extra": {
+        "typo3/cms": {
+            "cms-package-dir": "{$vendor-dir}/typo3/cms"
+        }
+    }
 }
